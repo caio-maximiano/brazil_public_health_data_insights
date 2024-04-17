@@ -5,4 +5,11 @@
 
 # COMMAND ----------
 
+# MAGIC %sh
+# MAGIC rm ../../../../../../../temp
 
+# COMMAND ----------
+
+import wget
+
+wget.download("ftp://ftp.datasus.gov.br/cnes/BASE_DE_DADOS_CNES_202304.ZIP", "./temp/",bar="bar_adaptive")
